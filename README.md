@@ -7,10 +7,10 @@ if you choose to fork, make sure that you put your own `API_KEY` url in the conf
 
 ## stuff i used this time:
 **meta-llama/llama-4-scout-17b-16e-instruct** - that's an upgrade
-css
-html
-js
-serper.dev
-groq
+**css**
+**html**
+**js**
+**serper.dev**
+**groq**
 
 *made in 40 minutes*
