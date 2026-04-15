@@ -1,0 +1,119 @@
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000; }
+
+        .chat-container {
+            max-width: 650px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 20px;
+            padding-bottom: 150px;
+        }
+
+        .user-bubble {
+            background-color: #404040;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 16px;
+            font-size: 15px;
+            align-self: flex-end;
+            max-width: 80%;
+        }
+
+        .ai-container {
+            background-color: #EBEBEB;
+            padding: 24px;
+            border-radius: 16px;
+            max-width: 90%;
+            align-self: flex-start;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .ai-explanation { font-size: 18px; font-weight: 500; margin-bottom: 4px; line-height: 1.4; }
+        .products-found-label { font-size: 18px; font-weight: 500; margin-bottom: 20px; }
+
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .product-card {
+            background-color: #D9D9D9;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .product-info { display: flex; flex-direction: column; gap: 10px; width: 65%; }
+        .retail-price { font-size: 14px; font-weight: 600; }
+
+        .camel-btn {
+            background-color: #333333;
+            color: white;
+            font-size: 9px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            width: fit-content;
+        }
+
+        .product-image-container {
+            background-color: #B3B3B3;
+            width: 55px;
+            height: 55px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+
+        .skeleton {
+            background: linear-gradient(90deg, #D9D9D9 25%, #e5e5e5 50%, #D9D9D9 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .input-wrapper {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #EBEBEB;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+        }
+
+        #user-input {
+            background: transparent;
+            border: none;
+            flex: 1;
+            padding: 14px;
+            font-size: 16px;
+            outline: none;
+            color: #333;
+        }
+
+        .send-button {
+            background-color: #404040;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s;
+        }
+        .send-button:active { transform: scale(0.95); }
